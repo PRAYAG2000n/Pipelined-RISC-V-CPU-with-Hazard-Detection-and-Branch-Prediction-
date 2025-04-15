@@ -6,14 +6,14 @@ module hazard_unit (
     input wire [4:0] rd_ex,
     input wire [4:0] rd_mem,
     input wire [4:0] rd_wb,
-    input wire       reg_write_ex,
-    input wire       reg_write_mem,
-    input wire       reg_write_wb,
-    input wire       mem_read_ex,
+    input wire reg_write_ex,
+    input wire reg_write_mem,
+    input wire reg_write_wb,
+    input wire mem_read_ex,
     
-    output reg       stall_if,
-    output reg       stall_id,
-    output reg       flush_id,
+    output reg stall_if,
+    output reg stall_id,
+    output reg flush_id,
     output reg [1:0] forward_a,
     output reg [1:0] forward_b
 );
