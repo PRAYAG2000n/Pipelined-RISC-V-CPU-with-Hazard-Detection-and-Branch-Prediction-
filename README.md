@@ -271,4 +271,13 @@ wave zoom full
 ```</code> </pre>
 ---
 
+## Conclusion
+
+The RISC-V pipelined CPU simulation was successfully executed, demonstrating correct instruction fetch, decode, execution, memory access, and write-back stages. The inclusion of a simple branch predictor and hazard detection logic effectively handled control and data hazards, as verified by simulation.
+
+The functional coverage report confirms 100% coverage across all defined covergroups, including:
+- Instruction execution (PC index tracking)
+- Pipeline stall and flush events
+- Cross-coverage of stall/flush with instruction phases
+This indicates that the testbench comprehensively exercised the core functionalities of the CPU, validating the design against a representative instruction set and control flow patterns. The simulation output shows correct progression of the PC and appropriate hazard responses, confirming that the CPU design is robust and ready for further extensions (e.g., more instructions, deeper pipelines, cache integration).
 
