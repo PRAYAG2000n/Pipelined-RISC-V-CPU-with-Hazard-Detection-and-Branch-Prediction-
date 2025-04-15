@@ -6,7 +6,7 @@ Simulation, waveform generation, and coverage reporting are automated using **Mo
 ---
 ## Features
 
--  **6 Pipeline Stages:** IF → ID → EX → MEM → WB (+ hazard unit)  
+-  **6 Pipeline Stages:** IF => ID => EX => MEM => WB (+ hazard unit)  
 -  **Data Hazards:** Handled via forwarding (EX/MEM → EX) and stall logic  
 -  **Control Hazards:** Managed with a simple **2-bit branch predictor (BPU)**  
 -  **Functional Coverage:** Tracks pipeline stalls, flushes, and PC progression  
@@ -32,7 +32,7 @@ Simulation, waveform generation, and coverage reporting are automated using **Mo
 - register_file.v
 - riscv_core.v # Top-level CPU (SystemVerilog-compatible)
 - riscv_tb.sv # Testbench: assertions + functional coverage
-- run_sim.do # Automates build, simulation, and coverage reporting
+- run_sim.tcl # Automates build, simulation, and coverage reporting
 
 ---
 
@@ -41,7 +41,7 @@ Simulation, waveform generation, and coverage reporting are automated using **Mo
 From the project directory:
 
 ```tcl
-do run_sim.do
+do run_sim.tcl
 ```
 This performs:
 - Cleans workspace (vdel, vlib, etc.)
