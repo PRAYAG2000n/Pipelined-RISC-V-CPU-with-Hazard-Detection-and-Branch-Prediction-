@@ -1,4 +1,4 @@
-# Go to your project directory
+# Go to the project directory
 cd "C:/Users/praya/Desktop/RISCV_CPU"
 
 transcript on
