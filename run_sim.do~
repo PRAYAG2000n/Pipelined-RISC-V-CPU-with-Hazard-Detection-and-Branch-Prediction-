@@ -42,6 +42,16 @@ quietly catch {delete wave *}
 add wave sim:/riscv_tb/clk
 add wave sim:/riscv_tb/reset
 add wave -radix hex  sim:/riscv_tb/uut/pc_if
+add wave -radix hex  sim:/riscv_tb/uut/pc_plus_4_if
+
+# From the predictor (instance name: bpu)
+add wave -radix hex  sim:/riscv_tb/uut/bpu/predicted_pc
+add wave -radix bin  sim:/riscv_tb/uut/bpu/prediction_taken
+
+# Actual branch decision in EX (to compare vs prediction)
+add wave -radix bin  sim:/riscv_tb/uut/branch_ex
+add wave -radix bin  sim:/riscv_tb/uut/zero_ex
+
 add wave -radix bin  sim:/riscv_tb/uut/hazard_detection/stall_id
 add wave -radix bin  sim:/riscv_tb/uut/hazard_detection/flush_id
 
