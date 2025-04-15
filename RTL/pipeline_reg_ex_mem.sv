@@ -4,19 +4,19 @@ module pipeline_reg_ex_mem (
     input wire [31:0] alu_result_in,
     input wire [31:0] write_data_in,
     input wire [4:0]  rd_in,
-    input wire        reg_write_in,
-    input wire        mem_read_in,
-    input wire        mem_write_in,
-    input wire        mem_to_reg_in,
-    input wire        zero_in,
+    input wire reg_write_in,
+    input wire mem_read_in,
+    input wire mem_write_in,
+    input wire mem_to_reg_in,
+    input wire zero_in,
     output reg [31:0] alu_result_out,
     output reg [31:0] write_data_out,
     output reg [4:0]  rd_out,
-    output reg        reg_write_out,
-    output reg        mem_read_out,
-    output reg        mem_write_out,
-    output reg        mem_to_reg_out,
-    output reg        zero_out
+    output reg reg_write_out,
+    output reg mem_read_out,
+    output reg mem_write_out,
+    output reg mem_to_reg_out,
+    output reg zero_out
 );
     always @(posedge clk or posedge reset) begin
         if (reset) begin
