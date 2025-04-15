@@ -1,4 +1,4 @@
-# Pipelined RISC-V CPU (Verilog / SystemVerilog)
+# Pipelined RISC-V CPU
 
 This project implements a **6-stage pipelined RISC-V CPU** with hazard detection, data forwarding, and a lightweight **branch predictor**.  
 Simulation, waveform generation, and coverage reporting are automated using **ModelSim / QuestaSim** with `run_sim.do`.
