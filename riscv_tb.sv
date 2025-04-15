@@ -1,12 +1,6 @@
 `timescale 1ns/1ps
 
-// Testbench is SystemVerilog so we can use assertions and covergroups.
-// Your RTL files can remain plain Verilog.
 module riscv_tb;
-
-  // ------------------------------------------------------------
-  // Clock & Reset
-  // ------------------------------------------------------------
   reg clk;
   reg reset;
 
@@ -22,24 +16,15 @@ module riscv_tb;
     reset = 1'b0;
     $display("Reset released, starting program execution...");
   end
-
-  // ------------------------------------------------------------
-  // DUT (instance name MUST be 'uut' to match paths below)
-  // ------------------------------------------------------------
+	
   riscv_core uut (
     .clk   (clk),
     .reset (reset)
   );
 
-  // ------------------------------------------------------------
-  // Progress prints (PC trace every cycle)
-  // ------------------------------------------------------------
   always @(posedge clk) if (!reset)
     $display("Time: %0t, PC: %08h", $time, uut.pc_if);
 
-  // ------------------------------------------------------------
-  // Simple counters for hazards/flushes (for summary)
-  // ------------------------------------------------------------
   integer hazard_count, flush_count;
   initial begin
     hazard_count = 0;
@@ -50,10 +35,6 @@ module riscv_tb;
     if (!reset && uut.hazard_detection.stall_id) hazard_count++;
     if (!reset && uut.hazard_detection.flush_id) flush_count++;
   end
-// =====================================================
-// Functional coverage + simple assertions (SV-only)
-// Safe signals only: pc_if, stall_id, flush_id
-// =====================================================
 
 // Assertions
 always @(posedge clk) begin
@@ -65,7 +46,6 @@ always @(posedge clk) begin
   end
 end
 
-// Phase (optional)
 typedef enum int {PHASE_RESET=0, PHASE_RUN=1} phase_e;
 phase_e phase;
 always @(posedge clk) begin
@@ -92,24 +72,21 @@ covergroup cg @(posedge clk);
   coverpoint stall_s { bins any_stall = {1'b1}; }
   coverpoint flush_s { bins any_flush = {1'b1}; }
 
-  // Crosses (now against locals, not hierarchical part-selects)
+  // Crosses
   cross stall_s, pc_idx;
   cross flush_s, pc_idx;
 endgroup
 
 cg covi = new;
 
-// Summary line
-// Print coverage before we finish
+
+// Print coverage
   initial begin
 	  @(negedge reset);
 	  #1000; // happens before your #1020 finish
 	  $display("Functional coverage (approx bins) = %0.2f%%", covi.get_coverage());
   end
   
-  // ------------------------------------------------------------
-  // End-of-run summary & finish (finite run)
-  // ------------------------------------------------------------
   initial begin
     #1020;
     $display("\n--- TB Summary ---");
