@@ -279,5 +279,6 @@ The functional coverage report confirms 100% coverage across all defined covergr
 - Instruction execution (PC index tracking)
 - Pipeline stall and flush events
 - Cross-coverage of stall/flush with instruction phases
+
 This indicates that the testbench comprehensively exercised the core functionalities of the CPU, validating the design against a representative instruction set and control flow patterns. The simulation output shows correct progression of the PC and appropriate hazard responses, confirming that the CPU design is robust and ready for further extensions (e.g., more instructions, deeper pipelines, cache integration).
 
