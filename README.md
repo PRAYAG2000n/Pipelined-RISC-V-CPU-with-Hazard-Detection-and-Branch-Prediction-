@@ -71,7 +71,7 @@ The predictor uses simple taken/not-taken history with immediate training feedba
 <img width="1598" height="511" alt="Screenshot 2025-10-26 113441" src="https://github.com/user-attachments/assets/9b9519cb-befb-477a-8299-f492e978e114" />
 ---
 ## Output
-Starting RISC-V CPU Simulation...
+<pre> <code> ```text run -all Starting RISC-V CPU Simulation...
 Reset released, starting program execution...
 Time: 25000, PC: 00000000
 Time: 35000, PC: 00000004
@@ -268,7 +268,7 @@ Final View
 wave zoom full
 0 ps
 1071 ns
-
+```</code> </pre>
 _
 
 
