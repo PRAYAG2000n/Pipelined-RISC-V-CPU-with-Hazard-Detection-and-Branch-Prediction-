@@ -270,7 +270,7 @@ Final View
 wave zoom full
 0 ps
 1071 ns
-```</code> </pre>
+</code> </pre>
 ---
 
 ## Conclusion
