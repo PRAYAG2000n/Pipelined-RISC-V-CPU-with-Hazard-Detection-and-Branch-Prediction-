@@ -1,7 +1,3 @@
-// ===============================================================
-// Simple 1-bit Branch Predictor with 16-entry BTB
-// ===============================================================
-
 module branch_predictor (
     input  wire         clk,
     input  wire         reset,
@@ -23,7 +19,7 @@ module branch_predictor (
     wire [3:0] index_if = pc_if[5:2];       // Simple index from lower bits
     wire [3:0] index_ex = branch_pc_ex[5:2]; // Same index for EX update
 
-    // --- IF stage prediction ---
+    // IF stage prediction
     always @(*) begin
         if (btb_valid[index_if] && btb_pc[index_if] == pc_if && predict_bit[index_if]) begin
             predicted_pc     = btb_target[index_if];
@@ -34,7 +30,7 @@ module branch_predictor (
         end
     end
 
-    // --- Update predictor after actual branch outcome ---
+    // Update predictor after actual branch outcome
     integer i;
     always @(posedge clk or posedge reset) begin
         if (reset) begin
