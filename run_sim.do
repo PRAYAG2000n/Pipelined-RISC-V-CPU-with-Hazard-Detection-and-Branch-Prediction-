@@ -1,4 +1,3 @@
-
 # Go to your project directory
 cd "C:/Users/praya/Desktop/RISCV_CPU"
 
