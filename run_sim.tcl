@@ -61,6 +61,5 @@ coverage save riscv_cov.ucdb
 coverage report -details -cvg
 
 # Final View
-# =========================================================
 wave zoom full
 
