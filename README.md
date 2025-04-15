@@ -67,7 +67,7 @@ The predictor uses simple taken/not-taken history with immediate training feedba
 - Training phase (EX): Updates predictor on actual branch outcome (branch_ex & zero_ex)
 - On mispredict: Flush signal triggered via hazard unit
 ---
-**Waveform view:**
+## **Waveform view:**
 <img width="1598" height="511" alt="Screenshot 2025-10-26 113441" src="https://github.com/user-attachments/assets/9b9519cb-befb-477a-8299-f492e978e114" />
 ---
 ## Output
