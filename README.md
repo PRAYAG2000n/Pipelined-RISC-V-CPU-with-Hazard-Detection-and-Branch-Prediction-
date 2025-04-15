@@ -7,8 +7,8 @@ Simulation, waveform generation, and coverage reporting are automated using **Mo
 ## Features
 
 -  **6 Pipeline Stages:** IF => ID => EX => MEM => WB (+ hazard unit)  
--  **Data Hazards:** Handled via forwarding (EX/MEM → EX) and stall logic  
--  **Control Hazards:** Managed with a simple **2-bit branch predictor (BPU)**  
+-  **Data Hazards:** Handled via forwarding (EX/MEM => EX) and stall logic  
+-  **Control Hazards:** Managed with a simple **1-bit branch predictor (BPU)**  
 -  **Functional Coverage:** Tracks pipeline stalls, flushes, and PC progression  
 -  **Assertions:** Detects misaligned PC or invalid stall+flush conditions  
 -  **Automated Simulation:** TCL script compiles, runs, and reports coverage  
