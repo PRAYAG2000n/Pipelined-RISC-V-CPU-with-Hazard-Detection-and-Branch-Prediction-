@@ -58,12 +58,12 @@ module riscv_core (
     wire [31:0] predicted_pc;
     wire        prediction_taken;
     
-    // ==================== PIPELINE STAGES ====================
+    // PIPELINE STAGES
     // Simple +4 (kept for reference; predictor chooses final next PC)
     assign pc_plus_4_if = pc_if + 32'd4;
     
-    // --- Branch Predictor (new) ---
-    // Trains on EX decision: "taken" when branch_ex & zero_ex (BEQ-like)
+    // Branch Predictor
+
     branch_predictor bpu (
         .clk              (clk),
         .reset            (reset),
@@ -77,7 +77,7 @@ module riscv_core (
     );
 
 
-    // === IF Stage ===
+    // IF Stage
     pc_reg pc_stage (
         .clk(clk),
         .reset(reset),
@@ -104,7 +104,7 @@ module riscv_core (
         .instruction_out(instruction_id)
     );
     
-    // === ID Stage ===
+    // ID Stage
     assign rs1_id = instruction_id[19:15];
     assign rs2_id = instruction_id[24:20];
     assign rd_id  = instruction_id[11:7];
@@ -171,7 +171,7 @@ module riscv_core (
         .branch_out(branch_ex)
     );
     
-    // === EX Stage ===
+    // EX Stage
     hazard_unit hazard_detection (
         .rs1_id(rs1_id),
         .rs2_id(rs2_id),
@@ -235,7 +235,7 @@ module riscv_core (
         .zero_out(zero_mem)
     );
     
-    // === MEM Stage ===
+    // MEM Stage
     data_memory dmem (
         .clk(clk),
         .mem_read(mem_read_mem),
@@ -261,7 +261,7 @@ module riscv_core (
         .mem_to_reg_out(mem_to_reg_wb)
     );
     
-    // === WB Stage ===
+    // WB Stage
     assign write_back_data = mem_to_reg_wb ? read_data_wb : alu_result_wb;
 
 endmodule
