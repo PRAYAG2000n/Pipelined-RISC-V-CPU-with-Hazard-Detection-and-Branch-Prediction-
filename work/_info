@@ -1,0 +1,376 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/praya/Desktop/RISCV_CPU
+valu
+Z1 !s110 1761492562
+!i10b 1
+!s100 ?n[ei4OoUSFUiNbINPeom1
+IFkjC]lZP9KmVed>8n^VOB3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1761402499
+8alu.v
+Falu.v
+L0 1
+Z3 OL;L;10.7c;67
+r1
+!s85 0
+31
+Z4 !s108 1761492562.000000
+Z5 !s107 branch_predictor.v|register_file.v|pipeline_reg_mem_wb.v|pipeline_reg_if_id.v|pipeline_reg_id_ex.v|pipeline_reg_ex_mem.v|pc_reg.v|instruction_memory.v|immediate_generator.v|hazard_unit.v|data_memory.v|control_unit.v|alu_control.v|alu.v|
+Z6 !s90 -reportprogress|300|-cover|bcesf|+acc|alu.v|alu_control.v|control_unit.v|data_memory.v|hazard_unit.v|immediate_generator.v|instruction_memory.v|pc_reg.v|pipeline_reg_ex_mem.v|pipeline_reg_id_ex.v|pipeline_reg_if_id.v|pipeline_reg_mem_wb.v|register_file.v|branch_predictor.v|
+!i113 0
+Z7 !s102 -cover bcesf
+Z8 o-cover bcesf +acc -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z9 tCvgOpt 0
+valu_control
+R1
+!i10b 1
+!s100 nb[:1Uj3]J?Dh2O5]F6<n1
+I7B6Y=VzOJUB>icoE?9H[11
+R2
+R0
+w1761401900
+8alu_control.v
+Falu_control.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+R5
+R6
+!i113 0
+R7
+R8
+R9
+vbranch_predictor
+R1
+!i10b 1
+!s100 UJ>NLc21B4;ZzHDKiATDn0
+I5]?;kg@GR`iVRo9AdV1<^1
+R2
+R0
+w1761490639
+8branch_predictor.v
+Fbranch_predictor.v
+L0 5
+R3
+r1
+!s85 0
+31
+R4
+R5
+R6
+!i113 0
+R7
+R8
+R9
+vcontrol_unit
+R1
+!i10b 1
+!s100 jCE@Va`D964U4>TZF^zVT1
+IIV_RT=43V4Jho=C2<0a3L1
+R2
+R0
+w1761401378
+8control_unit.v
+Fcontrol_unit.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+R5
+R6
+!i113 0
+R7
+R8
+R9
+vdata_memory
+R1
+!i10b 1
+!s100 68ZS8PeU[TSDKPiIQ0nBE0
+IZKU3mh5]zeJC5;lhkkO6Z0
+R2
+R0
+w1761401953
+8data_memory.v
+Fdata_memory.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+R5
+R6
+!i113 0
+R7
+R8
+R9
+vhazard_unit
+R1
+!i10b 1
+!s100 Ag;KidzRg[mWHVRnQQCG91
+IkoC`eXAC8fF0:IYE]I]>i1
+R2
+R0
+w1761401198
+8hazard_unit.v
+Fhazard_unit.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+R5
+R6
+!i113 0
+R7
+R8
+R9
+vimmediate_generator
+R1
+!i10b 1
+!s100 ePNRDT3I6TTZ9:TjUOog03
+IcGcX`A6AX_=lO=gli]iQd2
+R2
+R0
+w1761402031
+8immediate_generator.v
+Fimmediate_generator.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+R5
+R6
+!i113 0
+R7
+R8
+R9
+vinstruction_memory
+R1
+!i10b 1
+!s100 IQWT:aK^fA3fYclegSG]O1
+ID2LC[OmIXQV3ZjGL41Q;=3
+R2
+R0
+w1761486814
+8instruction_memory.v
+Finstruction_memory.v
+L0 8
+R3
+r1
+!s85 0
+31
+R4
+R5
+R6
+!i113 0
+R7
+R8
+R9
+vpc_reg
+R1
+!i10b 1
+!s100 njWbVjC^^IoddN^ZJNj3Z0
+I<^NKGeG2GWYmUEZOY:hf?1
+R2
+R0
+w1761401808
+8pc_reg.v
+Fpc_reg.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+R5
+R6
+!i113 0
+R7
+R8
+R9
+vpipeline_reg_ex_mem
+R1
+!i10b 1
+!s100 iaVo4NgK0O6naYJ7UU`RO0
+I;G953L>1FE;1M2mZj8Aom3
+R2
+R0
+w1761402150
+8pipeline_reg_ex_mem.v
+Fpipeline_reg_ex_mem.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+R5
+R6
+!i113 0
+R7
+R8
+R9
+vpipeline_reg_id_ex
+R1
+!i10b 1
+!s100 6dYL9OWN4Eg29nHJC1YKS0
+I_VG2LHZh=P:ca`bc1aP3M0
+R2
+R0
+w1761402108
+8pipeline_reg_id_ex.v
+Fpipeline_reg_id_ex.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+R5
+R6
+!i113 0
+R7
+R8
+R9
+vpipeline_reg_if_id
+R1
+!i10b 1
+!s100 <];>g>FY_bz8eQPj2zK^k0
+IHDz2e=l?bh]:6nbmhc17L2
+R2
+R0
+w1761402066
+8pipeline_reg_if_id.v
+Fpipeline_reg_if_id.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+R5
+R6
+!i113 0
+R7
+R8
+R9
+vpipeline_reg_mem_wb
+R1
+!i10b 1
+!s100 jg<kmaY`2Y^Tf8N=^9zXb0
+ILKJX_]Ya>lNbZ`=NEFkge2
+R2
+R0
+w1761402196
+8pipeline_reg_mem_wb.v
+Fpipeline_reg_mem_wb.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+R5
+R6
+!i113 0
+R7
+R8
+R9
+vregister_file
+R1
+!i10b 1
+!s100 zVXIN:_A>J5lHdc6Qe3N03
+Ig8To=b1R7J@E9b_e5hVh;3
+R2
+R0
+w1761401323
+8register_file.v
+Fregister_file.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+R5
+R6
+!i113 0
+R7
+R8
+R9
+vriscv_core
+Z10 DXx6 sv_std 3 std 0 22 d=_JfHTnXCN[H5FjiaJJc0
+R1
+!i10b 1
+!s100 l_3ER0ka4QfN3gBP:1<Zg0
+IO=1F?UgQWSgYTdJ5_zQLQ0
+R2
+!s105 riscv_core_v_unit
+S1
+R0
+w1761491198
+8riscv_core.v
+Friscv_core.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 riscv_core.v|
+!s90 -reportprogress|300|-sv|-cover|bcesf|+acc|riscv_core.v|
+!i113 0
+R7
+Z11 o-sv -cover bcesf +acc -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R9
+vriscv_tb
+R10
+R1
+!i10b 1
+!s100 PJ=ccR[jVW0`3ZPmNd:?33
+IhkS:ilB1h7<>bHDQ>DPPP3
+R2
+!s105 riscv_tb_sv_unit
+S1
+R0
+w1761486108
+8riscv_tb.sv
+Friscv_tb.sv
+L0 5
+R3
+r1
+!s85 0
+31
+R4
+!s107 riscv_tb.sv|
+!s90 -reportprogress|300|-sv|-cover|bcesf|+acc|riscv_tb.sv|
+!i113 0
+R7
+R11
+R9
+Triscv_tb_opt
+R1
+VJl1NA:K:^4MaC6GN0heE]0
+04 8 4 work riscv_tb fast 0
+o+acc
+R9
+nriscv_tb_opt
+OL;O;10.7c;67

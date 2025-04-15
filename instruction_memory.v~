@@ -1,0 +1,47 @@
+// instruction_memory.v
+// Verilog-2001, word-addressed instruction ROM (256 words)
+
+module instruction_memory (
+    input  wire [31:0] address,
+    output reg  [31:0] instruction
+);
+    // 1 KB = 256 x 32-bit words
+    reg [31:0] mem [0:255];
+
+    integer i;
+    initial begin
+        // Default all to NOP (addi x0,x0,0 = 0x00000013)
+        for (i = 0; i < 256; i = i + 1) begin
+            mem[i] = 32'h00000013;
+        end
+
+        // -------------------------
+        // Base test program (yours)
+        // -------------------------
+        mem[0] = 32'h00500093; // addi x1, x0, 5
+        mem[1] = 32'h00300113; // addi x2, x0, 3
+        mem[2] = 32'h002081b3; // add  x3, x1, x2
+        mem[3] = 32'h00208233; // add  x4, x1, x2
+        mem[4] = 32'h004182b3; // add  x5, x3, x4
+        mem[5] = 32'h00002303; // lw   x6, 0(x0)
+        mem[6] = 32'h00602423; // sw   x6, 8(x0)
+
+        // ---------------------------------------------------------
+        // Coverage helpers (to hit cross bins in mid/high PC ranges)
+        // ---------------------------------------------------------
+        // PC index ~ 0xA0/4 = 40 -> MID/HIGH bin (creates a classic load-use STALL)
+        mem[40] = 32'h00002303; // lw   x6, 0(x0)
+        mem[41] = 32'h000303b3; // add  x7, x6, x0   (uses x6 immediately -> stall)
+
+        // PC index ~ 0xF0/4 = 60 -> HIGH bin (taken branch -> FLUSH)
+        // beq x1, x1, +8 bytes  (taken)
+        mem[60] = 32'h00108463; // BEQ enc: imm[12|10:5|4:1|11] + rs2=x1 rs1=x1 funct3=000 opcode=0x63
+
+        // (Everything else remains NOP.)
+    end
+
+    // Word-aligned fetch (ignore address[1:0])
+    always @(*) begin
+        instruction = mem[address[31:2]];
+    end
+endmodule
