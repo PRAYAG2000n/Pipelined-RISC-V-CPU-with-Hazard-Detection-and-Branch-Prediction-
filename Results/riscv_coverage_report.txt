@@ -1,0 +1,66 @@
+COVERGROUP COVERAGE:
+-----------------------------------------------------------------------------------------------
+Covergroup                                             Metric       Goal    Status               
+                                                                                              
+-----------------------------------------------------------------------------------------------
+ TYPE /riscv_tb/cg                                    100.00%        100    Covered              
+    covered/total bins:                                    11         11                      
+    missing/total bins:                                     0         11                      
+    % Hit:                                            100.00%        100                      
+    Coverpoint cg::pc_idx                             100.00%        100    Covered              
+        covered/total bins:                                 3          3                      
+        missing/total bins:                                 0          3                      
+        % Hit:                                        100.00%        100                      
+    Coverpoint cg::stall_s                            100.00%        100    Covered              
+        covered/total bins:                                 1          1                      
+        missing/total bins:                                 0          1                      
+        % Hit:                                        100.00%        100                      
+    Coverpoint cg::flush_s                            100.00%        100    Covered              
+        covered/total bins:                                 1          1                      
+        missing/total bins:                                 0          1                      
+        % Hit:                                        100.00%        100                      
+    Cross cg::#cross__0#                              100.00%        100    Covered              
+        covered/total bins:                                 3          3                      
+        missing/total bins:                                 0          3                      
+        % Hit:                                        100.00%        100                      
+    Cross cg::#cross__1#                              100.00%        100    Covered              
+        covered/total bins:                                 3          3                      
+        missing/total bins:                                 0          3                      
+        % Hit:                                        100.00%        100                      
+ Covergroup instance \/riscv_tb/covi                  100.00%        100    Covered              
+    covered/total bins:                                    11         11                      
+    missing/total bins:                                     0         11                      
+    % Hit:                                            100.00%        100                      
+    Coverpoint pc_idx                                 100.00%        100    Covered              
+        covered/total bins:                                 3          3                      
+        missing/total bins:                                 0          3                      
+        % Hit:                                        100.00%        100                      
+        bin low                                            12          1    Covered              
+        bin mid                                            26          1    Covered              
+        bin high                                           63          1    Covered              
+    Coverpoint stall_s                                100.00%        100    Covered              
+        covered/total bins:                                 1          1                      
+        missing/total bins:                                 0          1                      
+        % Hit:                                        100.00%        100                      
+        bin any_stall                                       5          1    Covered              
+    Coverpoint flush_s                                100.00%        100    Covered              
+        covered/total bins:                                 1          1                      
+        missing/total bins:                                 0          1                      
+        % Hit:                                        100.00%        100                      
+        bin any_flush                                       5          1    Covered              
+    Cross #cross__0#                                  100.00%        100    Covered              
+        covered/total bins:                                 3          3                      
+        missing/total bins:                                 0          3                      
+        % Hit:                                        100.00%        100                      
+        bin <any_stall,low>                                 1          1    Covered              
+        bin <any_stall,mid>                                 2          1    Covered              
+        bin <any_stall,high>                                2          1    Covered              
+    Cross #cross__1#                                  100.00%        100    Covered              
+        covered/total bins:                                 3          3                      
+        missing/total bins:                                 0          3                      
+        % Hit:                                        100.00%        100                      
+        bin <any_flush,low>                                 1          1    Covered              
+        bin <any_flush,mid>                                 2          1    Covered              
+        bin <any_flush,high>                                2          1    Covered              
+
+TOTAL COVERGROUP COVERAGE: 100.00%  COVERGROUP TYPES: 1
